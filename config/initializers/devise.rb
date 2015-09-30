@@ -261,17 +261,20 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
   config.secret_key = ENV["SECRET_KEY_BASE"];
-  
+
 
 
   #Add your ID and secret here
   #ID first, secret second
-  config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"]
-  config.omniauth :facebook, ENV["FACEBOOK_CLIENT_ID"], ENV["FACEBOOK_CLIENT_SECRET"], scope: 'public_profile,email', info_fields: 'email,name'
+  #config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"]
+  #config.omniauth :facebook, ENV["FACEBOOK_CLIENT_ID"], ENV["FACEBOOK_CLIENT_SECRET"], scope: 'public_profile,email', info_fields: 'email,name'
+  config.omniauth :github,   ENV["GITHUB_CLIENT_ID"], ENV["GITHUB_CLIENT_SECRET"],{
+    :scope => 'user:email',
+    :client_options => {
+        :site => 'https://github.ucsb.edu/api/v3',
+        :authorize_url => 'https://github.ucsb.edu/login/oauth/authorize',
+        :token_url => 'https://github.ucsb.edu/login/oauth/access_token',
+      }
+    }
+
 end
-
-
-
-
-
-

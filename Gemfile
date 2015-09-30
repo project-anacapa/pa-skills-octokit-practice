@@ -33,6 +33,7 @@ gem 'devise'
 gem 'omniauth'
 gem "omniauth-facebook"
 gem "omniauth-google-oauth2"
+gem "omniauth-github"
 
 gem "foreman"
 group :production, :staging do
@@ -73,11 +74,3 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-angular-mocks'
   gem 'rails-assets-bootstrap'
 end
-
-
-
-
-
-
-
-
