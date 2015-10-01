@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PaRails</title>
+  <title>Anacapa</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div>
+  	<nav id="navigation-bar"class="navbar navbar-default navbar-static-top navbar-inverse custom-navbar">
+  		<div class="container">
+  			<div class="navbar-left">
+  				<ul class="nav navbar-nav">
+  					<li class="active">
+  						<a href="/" id="home-button"><span class="glyphicon glyphicon-home"></span> Home</a>
+  					</li>
+  					<li class="active">
+  						<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#login-modal">Login</button>
+  					</li>
+  				</ul>
+  			</div>
+  		</div>
+  	</nav>
+  </div>
 
 <%= yield %>
+<!--
+<div class="modal-header modal hide fade" id="login-modal">
+    <h3 class="modal-title">Sign In</h3>
+    <hr>
+    <div>
+    <div>
+      <a id="facebook-login" class="btn navbar-btn btn-block btn-social btn-facebook" href ng-click="ctrl.login('facebook')">
+        <i class="fa fa-facebook"></i> Login with Facebook
+      </a>
+    </div>
+    <div>
+      <a id="google-login" class="btn navbar-btn btn-block btn-social btn-google-plus" href ng-click="ctrl.login('google_oauth2')">
+        <i class="fa fa-google"></i> Login with Google
+      </a>
+    </div>
+    <div>
+      <a id="github-login" class="btn navbar-btn btn-block btn-social btn-github" href ng-click="ctrl.login('github')">
+        <i class="fa fa-github"></i> Login with github.ucsb.edu
+      </a>
+    </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" type="button" ng-click="ctrl.cancel()">back</button>
+    </div>
+</div>
+-->
+<div class="modal fade" id="login-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body">
+        <div>
+          <a id="github-login" class="btn navbar-btn btn-block btn-social btn-github" href ng-click="ctrl.login('github')">
+            <i class="fa fa-github"></i> Login with github.ucsb.edu
+          </a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 </body>
 </html>

@@ -20,19 +20,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-
-
-gem 'angular-rails-templates'
-
-
 gem 'sprockets'
 gem 'sprockets-rails'
 
 gem 'therubyracer'
 gem 'devise'
 gem 'omniauth'
-gem "omniauth-facebook"
-gem "omniauth-google-oauth2"
 gem "omniauth-github"
 
 gem "foreman"
@@ -67,10 +60,7 @@ gem 'font-awesome-rails'
 
 # see https://rails-assets.org
 source 'https://rails-assets.org' do
-  gem 'rails-assets-angular'
-  gem 'rails-assets-angular-cookies'
-  gem 'rails-assets-angular-ui-router'
-  gem 'rails-assets-angular-bootstrap'
-  gem 'rails-assets-angular-mocks'
   gem 'rails-assets-bootstrap'
 end
+
+gem 'cancancan'
