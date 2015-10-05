@@ -1,17 +1,11 @@
 Rails.application.routes.draw do
-  resources :courses
+  resources :courses do
+    resources :projects
+  end
+
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   root 'home#index'
 
-
-  #get "/course" => "course#index"
-  #get "/course/:id" => "course#show"
-  #get "/course/new" => "course#new"
-  #post "/course" => "course#create"
-  #get "/course/:id/edit" => "course#edit"
-  #put "/course/:id" => "course#update"
-  #delete "/course/:id" => "course#destroy"
-  resources :course
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

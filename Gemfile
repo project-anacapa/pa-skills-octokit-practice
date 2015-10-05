@@ -64,3 +64,4 @@ source 'https://rails-assets.org' do
 end
 
 gem 'cancancan'
+gem 'rake', '10.4.2' 
