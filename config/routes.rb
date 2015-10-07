@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   resources :courses do
-    resources :projects
+    resources :projects do
+      resources :submissions
+    end
   end
 
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
-  root 'home#index'
+  root 'courses#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
