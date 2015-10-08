@@ -269,7 +269,7 @@ Devise.setup do |config|
   #config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"]
   #config.omniauth :facebook, ENV["FACEBOOK_CLIENT_ID"], ENV["FACEBOOK_CLIENT_SECRET"], scope: 'public_profile,email', info_fields: 'email,name'
   config.omniauth :github,   ENV["GITHUB_CLIENT_ID"], ENV["GITHUB_CLIENT_SECRET"],{
-    :scope => 'user:email',
+    :scope => 'user:email,repo',
     :client_options => {
         :site => 'https://github.ucsb.edu/api/v3',
         :authorize_url => 'https://github.ucsb.edu/login/oauth/authorize',

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Submission</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Id</th>
+
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @submissions.each do |submission| %>
+      <tr>
+        <td><%= submission.user %></td>
+        <td><%= submission.id %></td>
+        <!--
+        <td><%= link_to 'Show', course_project_submission_url(@course,@project,submission) %></td>
+        <td><%= link_to 'Edit', edit_course_project_submission_path(@course, @project, submission) %></td>
+        <td><%= link_to 'Destroy', course_project_submission_url(@course,@project, submission), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

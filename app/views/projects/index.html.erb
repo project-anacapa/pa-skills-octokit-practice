@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Projects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Course</th>
+      <th>Github Repo</th>
+      <th>Access Token</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.name %></td>
+        <td><%= project.course %></td>
+        <td><%= project.repo %></td>
+        <td><%= project.access_token %></td>
+        <td><%= link_to 'Submissions', course_project_submissions_path(@course,project) %></td>
+        <td><%= link_to 'Show', course_project_url(@course,project) %></td>
+        <td><%= link_to 'Edit', edit_course_project_path(@course, project) %></td>
+        <td><%= link_to 'Destroy', course_project_url(@course,project), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Project', new_course_project_path %>
