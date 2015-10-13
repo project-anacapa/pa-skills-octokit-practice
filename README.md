@@ -1,2 +1,2 @@
-# pa-skills-octokit-scripts
-This is a spike of potentially throwaway code, but possibly useful code, that demos octokit capabilities at command line
+# pa-skills-octokit-practice
+This is a spike of potentially throwaway code, but possibly useful code, that demos octokit capabilities
