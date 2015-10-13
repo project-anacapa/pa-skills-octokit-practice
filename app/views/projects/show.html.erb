@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Github Repo:</strong>
+  <%= @project.repo %>
+</p>
+
+<p>
+  <strong>Github Access Token:</strong>
+  <%= @project.access_token %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @project.course.id %>
+</p>
+
+<%= link_to 'Edit', edit_course_project_path(@course,@project) %> |
+<%= link_to 'Back', course_projects_path(@course) %>
